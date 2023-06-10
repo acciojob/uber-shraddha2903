@@ -9,24 +9,24 @@ public class Admin {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int adminId;
 
-    private String userName;
+    private String username;
     private String password;
 
     public int getAdminId() {
         return adminId;
+    }
+    public String getUsername() {
+        return username;
+    }
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public void setAdminId(int adminId) {
         this.adminId = adminId;
     }
 
-//    public String getUserName() {
-//        return userName;
-//    }
-//
-//    public void setUserName(String userName) {
-//        this.userName = userName;
-//    }
+
 
     public String getPassword() {
         return password;
