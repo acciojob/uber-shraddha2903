@@ -26,9 +26,9 @@ public class TripBooking {
         return tripBookingId;
     }
 
-    public void setTripbookingId(int tripbookingId) {
-        this.tripBookingId = tripbookingId;
-    }
+//    public void setTripbookingId(int tripbookingId) {
+//        this.tripBookingId = tripbookingId;
+//    }
 
     public String getFromLocation() {
         return fromLocation;
