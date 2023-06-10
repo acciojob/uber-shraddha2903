@@ -17,9 +17,9 @@ public class Cab {
     @OneToOne
     @JoinColumn
     private Driver driver;
-    public void setDriver(Driver driver) {
-        this.driver = driver;
-    }
+//    public void setDriver(Driver driver) {
+//        this.driver = driver;
+//    }
 
     public Driver getDriver() {
         return driver;
