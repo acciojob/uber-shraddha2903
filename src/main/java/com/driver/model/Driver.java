@@ -9,19 +9,11 @@ import java.util.List;
 public class Driver {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int driverId;
 
     private String mobile;
 
     private String password;
-
-    public Cab getCab() {
-        return cab;
-    }
-
-    public void setCab(Cab cab) {
-        this.cab = cab;
-    }
 
     @OneToOne(mappedBy = "driver",cascade = CascadeType.ALL)
     private Cab cab;
@@ -29,13 +21,14 @@ public class Driver {
     @OneToMany(mappedBy = "driver",cascade = CascadeType.ALL)
     private List<TripBooking> tripBookingList = new ArrayList<>();
 
-    public int getId() {
-        return id;
+
+    public int getDriverId() {
+        return driverId;
     }
 
-//    public void setId(int id) {
-//        this.id = id;
-//    }
+    public void setDriverId(int driverId) {
+        this.driverId = driverId;
+    }
 
     public String getMobile() {
         return mobile;
@@ -51,5 +44,21 @@ public class Driver {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Cab getCab() {
+        return cab;
+    }
+
+    public void setCab(Cab cab) {
+        this.cab = cab;
+    }
+
+    public List<TripBooking> getTripBookingList() {
+        return tripBookingList;
+    }
+
+    public void setTripBookingList(List<TripBooking> tripBookingList) {
+        this.tripBookingList = tripBookingList;
     }
 }
