@@ -26,12 +26,13 @@ public class DriverServiceImpl implements DriverService {
 		driver.setPassword(password);
 
 		Cab cab = new Cab();
-		cab.setDriver(driver);
 		cab.setPerKmRate(10);
 		cab.setAvailable(true);
 
 		driver.setCab(cab);
+		cab.setDriver(driver);
 
+		//only save the parent, child will automatically save
 		driverRepository3.save(driver);
 
 	}
