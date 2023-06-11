@@ -51,7 +51,7 @@ public class CustomerServiceImpl implements CustomerService {
 		List<Driver> driverList = driverRepository2.findAll();
 		for(Driver driver : driverList)
 		{
-			if(driver.getDriverId() < minId && driver.getCab().isAvailable())
+			if(driver.getDriverId() < minId && driver.getCab().getAvailable())
 			{
 				minId = driver.getDriverId();
 				perkmRate=driver.getCab().getPerKmRate();
