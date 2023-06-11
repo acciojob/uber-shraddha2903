@@ -22,13 +22,39 @@ public class TripBooking {
 
     private int bill;
 
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public Driver getDriver() {
+        return driver;
+    }
+
+    public void setDriver(Driver driver) {
+        this.driver = driver;
+    }
+
+    @ManyToOne
+    @JoinColumn
+    private Customer customer;
+
+    @ManyToOne
+    @JoinColumn
+    private Driver driver;
+
+
+
     public int getTripBookingId() {
         return tripBookingId;
     }
 
-//    public void setTripbookingId(int tripbookingId) {
-//        this.tripBookingId = tripbookingId;
-//    }
+    public void setTripbookingId(int tripbookingId) {
+        this.tripBookingId = tripbookingId;
+    }
 
     public String getFromLocation() {
         return fromLocation;
