@@ -10,7 +10,7 @@ public class TripBooking {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int tripBookingId;
+    private int TripBookingId;
 
     private String fromLocation;
 
@@ -22,22 +22,6 @@ public class TripBooking {
 
     private int bill;
 
-    public Customer getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
-
-    public Driver getDriver() {
-        return driver;
-    }
-
-    public void setDriver(Driver driver) {
-        this.driver = driver;
-    }
-
     @ManyToOne
     @JoinColumn
     private Customer customer;
@@ -46,14 +30,12 @@ public class TripBooking {
     @JoinColumn
     private Driver driver;
 
-
-
     public int getTripBookingId() {
-        return tripBookingId;
+        return TripBookingId;
     }
 
-    public void setTripbookingId(int tripbookingId) {
-        this.tripBookingId = tripbookingId;
+    public void setTripBookingId(int tripBookingId) {
+        TripBookingId = tripBookingId;
     }
 
     public String getFromLocation() {
@@ -94,5 +76,21 @@ public class TripBooking {
 
     public void setBill(int bill) {
         this.bill = bill;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public Driver getDriver() {
+        return driver;
+    }
+
+    public void setDriver(Driver driver) {
+        this.driver = driver;
     }
 }
